@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ============================================================
+    KINETIC ARCHITECT — Dark Theme
+    Design System: The Kinetic Architect
+    Generated from: Design System Document v1.0
+    ============================================================
+    Color Architecture (Dark Mode Inversion):
+      Primary   : Kinetic Green       (#8bfe2c) — luminous on dark
+      Accent    : Soft Growth Green   (#67c900) — active states
+      Secondary : Sky Blue            (#7fd0ee) — nav elements
+      Tertiary  : Mint Teal           (#58deba) — grouping headers
+      Surface   : Midnight Foundation (#0f1412) — deep workspace
+    ============================================================
+-->
+<resources>
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║           BASE APPLICATION THEME (Dark)             ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+    <style name="Theme.App" parent="Theme.Material3.Dark.NoActionBar">
+
+        <!-- ── PRIMARY ─────────────────────────────────────── -->
+        <!-- Luminous Kinetic Green on dark — primary_fixed     -->
+        <item name="colorPrimary">#8bfe2c</item>
+        <!-- Text/icons on primary surfaces (dark bg required)  -->
+        <item name="colorOnPrimary">#0e2000</item>
+        <!-- Deep brand container                               -->
+        <item name="colorPrimaryContainer">#173600</item>
+        <!-- Active states, completion indicators in container  -->
+        <item name="colorOnPrimaryContainer">#67c900</item>
+
+        <!-- ── SECONDARY ───────────────────────────────────── -->
+        <!-- Sky blue — nav, categorization on dark             -->
+        <item name="colorSecondary">#7fd0ee</item>
+        <!-- Text/icons on secondary surfaces                   -->
+        <item name="colorOnSecondary">#003547</item>
+        <!-- Deep navy container                                -->
+        <item name="colorSecondaryContainer">#004d66</item>
+        <!-- Light text/icons inside secondary containers       -->
+        <item name="colorOnSecondaryContainer">#bfe8ff</item>
+
+        <!-- ── TERTIARY ────────────────────────────────────── -->
+        <!-- Mint teal — sophisticated grouping on dark         -->
+        <item name="colorTertiary">#58deba</item>
+        <!-- Text/icons on tertiary surfaces                    -->
+        <item name="colorOnTertiary">#00382c</item>
+        <!-- Deep teal-black container                          -->
+        <item name="colorTertiaryContainer">#00362a</item>
+        <!-- Soft mint for text/icons in tertiary containers    -->
+        <item name="colorOnTertiaryContainer">#77fbd8</item>
+
+        <!-- ── ERROR ───────────────────────────────────────── -->
+        <item name="colorError">#ffb4ab</item>
+        <item name="colorOnError">#690005</item>
+        <item name="colorErrorContainer">#93000a</item>
+        <item name="colorOnErrorContainer">#ffdad6</item>
+
+        <!-- ── BACKGROUND ─────────────────────────────────── -->
+        <!-- Midnight Foundation — deep editorial workspace     -->
+        <item name="android:colorBackground">#0f1412</item>
+        <!-- Text/icons on background — soft premium white      -->
+        <item name="colorOnBackground">#e1e3de</item>
+
+        <!-- ── SURFACE ─────────────────────────────────────── -->
+        <!-- Main workspace — slightly lifted from background   -->
+        <item name="colorSurface">#0f1412</item>
+        <!-- Primary text on surface                            -->
+        <item name="colorOnSurface">#e1e3de</item>
+        <!-- Secondary text/icons — muted for hierarchy         -->
+        <item name="colorOnSurfaceVariant">#c0c7c0</item>
+
+        <!-- ── SURFACE CONTAINERS (Tonal Layering — Dark) ──── -->
+        <!-- Lowest: Glassmorphism overlays, focused input bg   -->
+        <!-- In dark mode: deepest black-green for glass effect -->
+        <item name="colorSurfaceContainerLowest">#0a0d0b</item>
+        <!-- Low: Sidebar panel (defines edge via tonal shift)  -->
+        <item name="colorSurfaceContainerLow">#171b18</item>
+        <!-- Default: Standard card background                  -->
+        <item name="colorSurfaceContainer">#1b1f1c</item>
+        <!-- High: High-priority task card — draws focus        -->
+        <item name="colorSurfaceContainerHigh">#252a26</item>
+        <!-- Highest: Input field background (resting)          -->
+        <item name="colorSurfaceContainerHighest">#303430</item>
+
+        <!-- ── OUTLINE ─────────────────────────────────────── -->
+        <!-- Ghost Border: used at 15% opacity only             -->
+        <item name="colorOutline">#8a9289</item>
+        <!-- Outline variant                                    -->
+        <item name="colorOutlineVariant">#40493f</item>
+
+        <!-- ── SURFACE TINT ───────────────────────────────── -->
+        <!-- Input focus bottom accent — kinetic green          -->
+<!--        <item name="colorSurfaceTint">#8bfe2c</item>-->
+
+        <!-- ── INVERSE ─────────────────────────────────────── -->
+        <item name="colorSurfaceInverse">#e1e3de</item>
+        <item name="colorOnSurfaceInverse">#2d312d</item>
+        <item name="colorPrimaryInverse">#244f00</item>
+
+        <!-- ── SHAPE (Roundedness) ────────────────────────── -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.KineticArchitect.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.KineticArchitect.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.KineticArchitect.Large</item>
+
+        <!-- ── STATUS BAR ─────────────────────────────────── -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- ── ELEVATION ──────────────────────────────────── -->
+        <!-- Tonal elevation disabled — depth via surface tiers -->
+        <item name="elevationOverlayEnabled">false</item>
+
+        <!-- ── COMPONENT DEFAULTS ─────────────────────────── -->
+        <item name="materialButtonStyle">@style/Widget.KineticArchitect.Dark.Button.Primary</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.KineticArchitect.Dark.Button.Ghost</item>
+        <item name="chipStyle">@style/Widget.KineticArchitect.Dark.Chip</item>
+        <item name="textInputStyle">@style/Widget.KineticArchitect.Dark.TextInput</item>
+        <item name="materialCardViewStyle">@style/Widget.KineticArchitect.Dark.Card</item>
+
+    </style>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║               SHAPE APPEARANCES (shared)            ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+    <!-- Note: Shape styles are theme-agnostic; defined in       -->
+    <!-- themes_light.xml and referenced by both themes.         -->
+    <!-- If using a merged file, include them once only.         -->
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║              BUTTON COMPONENTS (Dark)               ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+
+    <!-- Primary Button: Kinetic Green bg + deep text, xl round  -->
+    <style name="Widget.KineticArchitect.Dark.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">#8bfe2c</item>
+        <item name="android:textColor">#0e2000</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KineticArchitect.Small</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <!-- Note: Gradient in dark mode:                        -->
+        <!-- primary(#8bfe2c) → primary_container(#173600) 135° -->
+    </style>
+
+    <!-- Ghost Button (Dark): outline variant at low opacity      -->
+    <style name="Widget.KineticArchitect.Dark.Button.Ghost" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">#bfe8ff</item>
+        <item name="strokeColor">#40493f</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KineticArchitect.Small</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║              CHIP COMPONENT (Dark)                  ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+
+    <!-- Task Chip: deep navy container bg, mint text, pill shape -->
+    <style name="Widget.KineticArchitect.Dark.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">#004d66</item>
+        <item name="android:textColor">#bfe8ff</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KineticArchitect.Full</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">32dp</item>
+    </style>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║              TEXT INPUT COMPONENT (Dark)            ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+
+    <!-- Input: surface_container_highest bg, green focus accent  -->
+    <style name="Widget.KineticArchitect.Dark.TextInput" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">#303430</item>
+        <item name="boxStrokeColor">#8bfe2c</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <!-- Focus: transition bg to surface_container_lowest     -->
+        <item name="hintTextColor">#c0c7c0</item>
+        <item name="android:textColorHint">#c0c7c0</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KineticArchitect.Small</item>
+    </style>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║              CARD COMPONENT (Dark)                  ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+
+    <!-- Card: surface_container on surface_container_low        -->
+    <!-- Ambient shadow: 0px 8px 24px, 6% on_surface — subtle   -->
+    <style name="Widget.KineticArchitect.Dark.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">#1b1f1c</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KineticArchitect.Medium</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <!-- Custom shadow: 0px 8px 24px rgba(225,227,222, 0.06) -->
+    </style>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║        TEXT APPEARANCE STYLES (Dark)                ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+
+    <!-- Display Large: Manrope — luminous on dark midnight       -->
+    <style name="TextAppearance.KineticArchitect.Dark.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textSize">56sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#e1e3de</item>
+    </style>
+
+    <!-- Headline: Manrope — soft white on deep surface          -->
+    <style name="TextAppearance.KineticArchitect.Dark.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#e1e3de</item>
+    </style>
+
+    <!-- Body Medium: Inter — readable on dark surfaces           -->
+    <style name="TextAppearance.KineticArchitect.Dark.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#e1e3de</item>
+    </style>
+
+    <!-- Label: Inter — muted metadata on dark surfaces           -->
+    <style name="TextAppearance.KineticArchitect.Dark.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textColor">#c0c7c0</item>
+    </style>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║           GLASSMORPHISM OVERLAY REFERENCE           ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+    <!--
+        For modal overlays / floating panels (dark mode):
+          background : #0a0d0b at 80% opacity
+          backdrop   : blur(20px) — via RenderEffect API 31+
+          border     : colorOutlineVariant (#40493f) at 15% opacity
+
+        For modal overlays / floating panels (light mode):
+          background : #ffffff at 80% opacity
+          backdrop   : blur(20px) — via RenderEffect API 31+
+          border     : colorOutlineVariant (#c0c7cd) at 15% opacity
+
+        Apply programmatically via:
+          view.setRenderEffect(
+            RenderEffect.createBlurEffect(20f, 20f, Shader.TileMode.CLAMP)
+          )
+    -->
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗ -->
+    <!-- ║           TASK COMPLETION ANIMATION REFERENCE       ║ -->
+    <!-- ╚══════════════════════════════════════════════════════╝ -->
+    <!--
+        Task done animation sequence:
+          1. Transition card bg → primary_fixed (#8bfe2c) at 20% opacity
+             Light:  rgba(139, 254, 44, 0.20)
+             Dark:   rgba(139, 254, 44, 0.20)
+          2. Fade item out over 300ms
+          3. Collapse item height with spring interpolator
+
+        Use ValueAnimator or MotionLayout transition.
+    -->
+
+</resources>

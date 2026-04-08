@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fb"
+    android:overScrollMode="never"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ── PAGE HEADLINE ──────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task\nCategories"
+                android:fontFamily="@font/manrope"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="#173600"
+                android:letterSpacing="-0.02"
+                android:lineSpacingMultiplier="1.05" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Organize your workflow with architectural precision. Distribute your kinetic energy across specialized containers designed for maximum output."
+                android:fontFamily="@font/inter"
+                android:textSize="14sp"
+                android:textColor="#41484d"
+                android:lineSpacingMultiplier="1.5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Add Category"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/inter"
+                android:backgroundTint="#173600"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/add_circle_24px"
+                app:iconTint="#ffffff"
+                app:iconGravity="start"
+                app:iconPadding="6dp" />
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════════════════════ -->
+        <!-- LOADING STATE — shimmer skeleton cards                    -->
+        <!-- Show: layoutLoading.visibility = View.VISIBLE            -->
+        <!-- Hide: layoutLoading.visibility = View.GONE               -->
+        <!-- ══════════════════════════════════════════════════════════ -->
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <include layout="@layout/item_category_skeleton" />
+            <include layout="@layout/item_category_skeleton" />
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════════════════════ -->
+        <!-- EMPTY STATE                                               -->
+        <!-- ══════════════════════════════════════════════════════════ -->
+        <LinearLayout
+            android:id="@+id/layoutEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="48dp"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="28dp">
+
+                <View
+                    android:id="@+id/blockTopLeft"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_shape"
+                    android:layerType="software"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/blockTopRight"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_shape"
+                    android:layerType="software"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/blockBottomLeft"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_shape"
+                    android:layerType="software"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/blockBottomRight"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_shape"
+                    android:layerType="software"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/category_24px"
+                        android:contentDescription="Categories"
+                        app:tint="@color/on_primary" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Your workspace is a blank canvas"
+                android:fontFamily="@font/manrope"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#191c1e"
+                android:textAlignment="center"
+                android:lineSpacingMultiplier="1.2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:text="Create your first category to start distributing your kinetic energy effectively and maintain focus."
+                android:fontFamily="@font/inter"
+                android:textSize="14sp"
+                android:textColor="#71787d"
+                android:textAlignment="center"
+                android:lineSpacingMultiplier="1.5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Create First Category"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/inter"
+                android:backgroundTint="#173600"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/add_circle_24px"
+                app:iconTint="#ffffff"
+                app:iconGravity="start"
+                app:iconPadding="6dp" />
+
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════════════════════════ -->
+        <!-- CATEGORIES RECYCLER LIST                                  -->
+        <!-- ══════════════════════════════════════════════════════════ -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingBottom="32dp"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            tools:visibility="gone"
+            tools:listitem="@layout/item_category"
+            tools:itemCount="4" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

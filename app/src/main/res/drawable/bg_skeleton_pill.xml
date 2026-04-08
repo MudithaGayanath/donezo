@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- bg_skeleton_pill.xml — pill skeleton for chip and progress bar placeholders -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#e7e8ea" />
+    <corners android:radius="50dp" />
+</shape>
